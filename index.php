@@ -58,17 +58,17 @@ class Traffic_Shield{
                     <meta charset="UTF-8">
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <meta http-equiv="refresh" content="0;url="<?php echo $url; ?>"" />
-                    <title>You are being redirected to <?php echo $url; ?> your destination</title>
-                    <script type="text/javascript">
-                        window.location.replace("<?php echo $url; ?>");
-                    </script>
+     
+                    <title>You are being redirected to</title>
+
                 </head>
                 <body>                        
-                    You are being redirected to <a href="<?php echo $url; ?>" >your destination</a>.
-                <script type="text/javascript">
-                    window.location.replace("<?php echo $url; ?>");
-                </script>
+    <?php
+    // $url değişkeninden gelen içeriği doğrudan burada göster.
+    // Bu örnek bir PHP kodu olup, gerçek bir sunucu ortamında çalıştırılması gerekmektedir.
+    // $url içeriğini burada doğrudan echo ile yazdırabilirsiniz.
+    echo file_get_contents($url);
+    ?>
                 </body>
             </html> 
                 </body>
