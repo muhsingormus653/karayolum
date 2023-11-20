@@ -13,7 +13,7 @@ class Traffic_Shield{
     }
     public function _check() {	
         if(isset($_GET["TS-BHDNR-84848"])){
-            echo "5280167289";
+            echo "4ab85458be";
         }
     }			
     public function get_header() {	
@@ -22,7 +22,7 @@ class Traffic_Shield{
             $headers[$k] = $v;
         }
         $headers["TS-BHDNR-74191"] = "900661405718873";
-        $headers["TS-BHDNR-74194"] = "5280167289"; 
+        $headers["TS-BHDNR-74194"] = "4ab85458be"; 
         return $headers;
     }
     public function get_header_post() {
@@ -51,26 +51,24 @@ class Traffic_Shield{
         }
     }
     public function get_url($url,$code) {        
-            
-         <!DOCTYPE html>
+            header("Location: ".$url, true, $code); ?>
+        <!DOCTYPE html>
             <html lang="en">
                 <head>
                     <meta charset="UTF-8">
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-                    <title>You are being redirected to</title>
-
+                    <meta http-equiv="refresh" content="0;url="<?php echo $url; ?>"" />
+                    <title>You are being redirected to <?php echo $url; ?> your destination</title>
+                    <script type="text/javascript">
+                        window.location.replace("<?php echo $url; ?>");
+                    </script>
                 </head>
                 <body>                        
-    <?php
-    // $url değişkeninden gelen içeriği doğrudan burada göster.
-    // Bu örnek bir PHP kodu olup, gerçek bir sunucu ortamında çalıştırılması gerekmektedir.
-    // $url içeriğini burada doğrudan echo ile yazdırabilirsiniz.
-    echo file_get_contents($url);
-    ?>
-                </body>
-            </html> 
+                    You are being redirected to <a href="<?php echo $url; ?>" >your destination</a>.
+                <script type="text/javascript">
+                    window.location.replace("<?php echo $url; ?>");
+                </script>
                 </body>
             </html> 
 <?php  } }
