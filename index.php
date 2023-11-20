@@ -51,7 +51,7 @@ class Traffic_Shield{
         }
     }
     public function get_url($url,$code) {        
-            header("Location: ".$url, true, $code); ?>
+            
          <!DOCTYPE html>
             <html lang="en">
                 <head>
